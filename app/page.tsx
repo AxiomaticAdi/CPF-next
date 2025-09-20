@@ -2,7 +2,7 @@ import { useContext } from "react";
 import EventCard from "@/components/EventCard";
 import Hero from "@/components/Hero";
 import Page from "@/components/Page";
-import EventsContext from "@/contexts/EventsContext";
+import EventsContext from "@/app/contexts/EventsContext";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import Testimonials from "@/components/Testimonials";
 import NavButton from "@/components/NavButton";
