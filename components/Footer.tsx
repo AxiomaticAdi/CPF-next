@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
 					<div className="text-xs sm:text-sm">
 						15775 Castle Peak Lane, Jamul, CA 91935
 					</div>
-					<Link to={"/legal"} className="text-xs sm:text-sm text-blue-400">
+					<Link href={"/legal"} className="text-xs sm:text-sm text-blue-400">
 						Legal Notices
 					</Link>
 				</div>

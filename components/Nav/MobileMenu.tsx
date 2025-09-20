@@ -1,7 +1,10 @@
+"use client";
+
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { CustomLink } from "./NavBar";
 
@@ -9,6 +12,8 @@ interface MobileMenuProps {
 	links: CustomLink[];
 }
 export default function MobileMenu({ links }: MobileMenuProps) {
+	const pathname = usePathname();
+	
 	return (
 		<div className="flex flex-col items-center w-full sm:hidden">
 			<div className="ml-auto mr-4">
@@ -48,22 +53,22 @@ export default function MobileMenu({ links }: MobileMenuProps) {
 								</div>
 								<nav className="mt-6">
 									<ul className="flex flex-col gap-4 items-center">
-										{links.map(({ text, path }, index) => (
-											<li key={index}>
-												<NavLink
-													to={path}
-													end
-													className={({ isActive }) =>
-														[
+										{links.map(({ text, path }, index) => {
+											const isActive = pathname === path || (path !== "/" && pathname.startsWith(path));
+											return (
+												<li key={index}>
+													<Link
+														href={path}
+														className={[
 															"hover:text-teal-800 cursor-pointer",
 															isActive ? "text-black" : "text-zinc-400",
-														].join(" ")
-													}
-												>
-													{text}
-												</NavLink>
-											</li>
-										))}
+														].join(" ")}
+													>
+														{text}
+													</Link>
+												</li>
+											);
+										})}
 									</ul>
 								</nav>
 							</Popover.Panel>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 
 interface BlogCardProps {
@@ -17,7 +17,7 @@ export default function BlogCard<T extends BlogCardProps>({
 	postDate,
 }: T) {
 	return (
-		<Link to={`/blog/${postId}`} className="block hover:opacity-75">
+		<Link href={`/blog/${postId}`} className="block hover:opacity-75">
 			<article className="relative isolate flex flex-col gap-8 lg:flex-row text-left border rounded-md p-4">
 				<div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
 					<Image

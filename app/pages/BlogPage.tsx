@@ -1,4 +1,4 @@
-import { BlogPosts } from "@/app/BlogPosts";
+import { BlogPosts } from "./BlogPosts";
 import BlogCard from "@/components/BlogCard";
 import Page from "@/components/Page";
 
