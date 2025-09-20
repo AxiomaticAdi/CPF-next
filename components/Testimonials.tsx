@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const testimonials = [
 	[
 		[
@@ -48,7 +50,7 @@ const testimonials = [
 	],
 ];
 
-function classNames(...classes: any[]) {
+function classNames(...classes: (string | boolean | undefined)[]) {
 	return classes.filter(Boolean).join(" ");
 }
 
@@ -82,10 +84,12 @@ export default function Testimonials() {
 											<p>{`“${testimonial.body}”`}</p>
 										</blockquote>
 										<figcaption className="mt-6 flex items-center gap-x-4">
-											<img
+											<Image
 												className="h-10 w-10 rounded-full bg-gray-50"
 												src={testimonial.author.imageUrl}
 												alt=""
+												width={40}
+												height={40}
 											/>
 											<div className="text-left">
 												<div className="font-semibold">

@@ -3,7 +3,7 @@ import EventsContext from "../contexts/EventsContext";
 import Calendar from "react-calendar";
 import Page from "@/components/Page";
 import { compareDates } from "../logic/dateLogic";
-import "../styles/Calendar.css";
+import "@/app/styles/Calendar.css";
 import EventCard from "@/components/EventCard";
 import LoadingSpinner from "@/components/LoadingSpinner";
 

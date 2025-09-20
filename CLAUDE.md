@@ -4,11 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
+This is an in-progress modernization of an old application. The application was built in vite (front) express (back) but we are looking to move to a centralized, NextJS monorepo structure.
+
 This is a Next.js 15 event management/ticketing platform using TypeScript, React 19, and Tailwind CSS v4. The application displays events, allows users to browse events by date, and includes ticketing functionality.
 
 ## Commands
 
 ### Development
+
 ```bash
 npm run dev        # Start development server with Turbopack
 npm run build      # Build for production with Turbopack
@@ -21,6 +24,7 @@ npm run fix-all    # Fix ESLint issues and format code
 ## Architecture
 
 ### Tech Stack
+
 - **Framework**: Next.js 15 with App Router
 - **State Management**: React Context API (EventsContext at `app/contexts/EventsContext.tsx`)
 - **Database**: Firebase Firestore
@@ -29,6 +33,7 @@ npm run fix-all    # Fix ESLint issues and format code
 - **Form Validation**: Zod (installed but not actively used)
 
 ### Key Directories
+
 - `/app` - Next.js App Router pages and application logic
   - `/app/config` - Firebase configuration
   - `/app/contexts` - React Context providers
@@ -56,6 +61,7 @@ npm run fix-all    # Fix ESLint issues and format code
 ## Firebase Integration
 
 The app uses Firebase Firestore for data storage. Key services:
+
 - `fetchEvents()` - Retrieves all events from Firestore
 - `verifyAvailability()` - Checks ticket availability for an event
 

@@ -1,4 +1,5 @@
 import Page from "@/components/Page";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -7,7 +8,7 @@ export default function AboutPage() {
       <div className="flex flex-col gap-12">
         <div className="flex flex-col items-center justify-center w-full gap-8">
           <h1 className="text-xl font-bold text-center">Chef</h1>
-          <img src="/chef-mark.jpg" className="max-w-96 rounded-md" />
+          <Image src="/chef-mark.jpg" className="max-w-96 rounded-md" width={384} height={384} alt="Chef Mark" />
           <div className="flex flex-col gap-2 text-left">
             <p>
               Chef Mark Pelliccia&apos;s culinary journey started at the age of ten,
@@ -48,7 +49,7 @@ export default function AboutPage() {
         </div>
         <div className="flex flex-col items-center justify-center w-full gap-8">
           <h1 className="text-xl font-bold text-center">Chief</h1>
-          <img src="/chief-doreen.jpg" className="max-w-96 rounded-md" />
+          <Image src="/chief-doreen.jpg" className="max-w-96 rounded-md" width={384} height={384} alt="Chief Doreen" />
           <div className="flex flex-col gap-2 text-left">
             <p>
               With a strong background in both front-of-house and back-of-house

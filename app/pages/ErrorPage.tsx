@@ -1,5 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import Page from "@/components/Page";
+import Image from "next/image";
 
 function isErrorWithMessageAndStatusText(
   error: unknown,
@@ -22,10 +23,12 @@ export default function ErrorPage() {
   return (
     <Page>
       <div className="flex flex-col items-center justify-center">
-        <img
+        <Image
           className="rounded-full py-8 grayscale"
           src={errorMessageImage}
-          width={"300px"}
+          width={300}
+          height={300}
+          alt="Error illustration"
         />
         <h1 className="text-4xl font-bold">Oops!</h1>
         <div>Sorry, an unexpected error has occurred.</div>

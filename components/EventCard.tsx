@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Image from "next/image";
 import { Event } from "../app/types";
 import BadgeSoldOut from "./Badges/BadgeSoldOut";
 
@@ -13,10 +14,12 @@ export default function EventCard({ event }: EventCardProps) {
     <Link to={`/events/${event.id}`}>
       <div className="relative flex flex-col items-center justify-center h-96 w-64 rounded-md overflow-hidden hover:scale-105">
         <BadgeSoldOut isSoldOut={isSoldOut} />
-        <img
+        <Image
           src={event.imageUrl}
           alt="Event"
           className="absolute inset-0 w-full h-full object-cover"
+          width={256}
+          height={384}
         />
         {/* Gradient Overlay */}
         <div className="absolute bottom-0 w-full h-1/5 bg-gradient-to-t from-black to-transparent">

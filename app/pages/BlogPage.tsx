@@ -1,11 +1,11 @@
-import { BlogPosts } from "../BlogPosts";
+import { BlogPosts } from "@/app/BlogPosts";
 import BlogCard from "@/components/BlogCard";
 import Page from "@/components/Page";
 
 export default function BlogPage() {
   return (
     <Page>
-      <h1 className="text-4xl font-bold mb-6">Mark's Musings</h1>
+      <h1 className="text-4xl font-bold mb-6">Mark&apos;s Musings</h1>
       {BlogPosts.map((post) => (
         <BlogCard
           key={post.id}

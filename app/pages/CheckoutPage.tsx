@@ -1,15 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "@/components/CheckoutForm";
 import EventsContext from "../contexts/EventsContext";
 import Page from "@/components/Page";
-import { Event } from "../types";
+import { Event } from "@/app/types";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import EventDetailsSection from "@/components/EventDetailsSection";
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+);
 
 const CheckoutPage: React.FC = () => {
   const { eventId, ticketQuantity } = useParams<{

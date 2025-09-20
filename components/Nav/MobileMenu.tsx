@@ -2,6 +2,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import Image from "next/image";
 import { CustomLink } from "./NavBar";
 
 interface MobileMenuProps {
@@ -71,10 +72,12 @@ export default function MobileMenu({ links }: MobileMenuProps) {
 				</Popover>
 			</div>
 			<div className="mx-auto">
-				<img
+				<Image
 					src={"cpf_logo.webp"}
 					alt="Castle Peak Farms Logo"
 					className="h-44 w-44"
+					width={176}
+					height={176}
 				/>
 			</div>
 		</div>

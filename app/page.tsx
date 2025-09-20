@@ -1,3 +1,5 @@
+"use client";
+
 import { useContext } from "react";
 import EventCard from "@/components/EventCard";
 import Hero from "@/components/Hero";

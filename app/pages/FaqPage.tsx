@@ -102,7 +102,7 @@ export default function FaqPage() {
             Do you grow all the vegetables?
           </h2>
           <p className="max-w-xl">
-            We can't grow everything we serve but if we haven't grown it here at
+            We can&apos;t grow everything we serve but if we haven&apos;t grown it here at
             CPF, we do our best to source fresh veggies and other ingredients
             from other local farms.
           </p>

@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import Image from "next/image";
 import { CustomLink } from "./NavBar";
 
 interface WebMenuProps {
@@ -29,10 +30,12 @@ export default function WebMenu({ links }: WebMenuProps) {
 				))}
 
 				<Link className="mx-auto flex-none" to={"/"}>
-					<img
+					<Image
 						src={"cpf_logo.webp"}
 						alt="Castle Peak Farms Logo"
 						className="h-44 w-44"
+						width={176}
+						height={176}
 					/>
 				</Link>
 

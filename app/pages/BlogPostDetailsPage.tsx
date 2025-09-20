@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import Page from "@/components/Page";
+import Image from "next/image";
 import { BlogPost } from "../types";
 import { BlogPosts } from "../BlogPosts";
 
@@ -27,10 +28,12 @@ export default function BlogPostDetailsPage() {
   return (
     <Page>
       <h1 className="text-4xl font-bold mb-6">{blogPost.postTitle}</h1>
-      <img
+      <Image
         src={blogPost.postImageUrl}
         alt={blogPost.postTitle}
         className="w-96 object-cover mb-6 rounded-md"
+        width={384}
+        height={256}
       />
 
       <div className="text-sm leading-6">

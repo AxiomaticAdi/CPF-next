@@ -1,4 +1,5 @@
 import DOMPurify from "dompurify";
+import Image from "next/image";
 import { Event } from "../app/types";
 import BadgePrice from "./Badges/BadgePrice";
 
@@ -19,10 +20,12 @@ export default function EventDetailsSection({
   return (
     <div className="flex flex-col items-center">
       <div className="w-80 sm:w-96 h-60 rounded-md relative">
-        <img
+        <Image
           src={event.imageUrl}
           alt={event.name}
           className="w-full h-full rounded-md object-cover"
+          width={384}
+          height={240}
         />
         <BadgePrice price={event.price} />
       </div>

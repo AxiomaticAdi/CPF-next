@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Image from "next/image";
 
 export default function Footer() {
 	return (
@@ -16,17 +17,21 @@ export default function Footer() {
 				<div className="flex justify-end flex-wrap gap-2 items-center text-right">
 					<div className="flex gap-2">
 						<a href="https://www.facebook.com/profile.php?id=100094433604365" target="_blank" rel="noopener noreferrer">
-							<img
+							<Image
 								src="https://cdn.svgporn.com/logos/facebook.svg"
 								alt="Facebook logo"
 								className="h-6 w-6 filter grayscale"
+								width={24}
+								height={24}
 							/>
 						</a>
 						<a href="https://www.instagram.com/castlepeakfarmsd/" target="_blank" rel="noopener noreferrer">
-							<img
+							<Image
 								src="https://cdn.svgporn.com/logos/instagram-icon.svg"
 								alt="Instagram logo"
 								className="h-6 w-6 filter grayscale"
+								width={24}
+								height={24}
 							/>
 						</a>
 					</div>

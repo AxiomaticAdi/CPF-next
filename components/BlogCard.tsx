@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Image from "next/image";
 
 interface BlogCardProps {
 	postId: string;
@@ -19,10 +20,11 @@ export default function BlogCard<T extends BlogCardProps>({
 		<Link to={`/blog/${postId}`} className="block hover:opacity-75">
 			<article className="relative isolate flex flex-col gap-8 lg:flex-row text-left border rounded-md p-4">
 				<div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-					<img
+					<Image
 						src={postImageUrl}
 						alt={`Blog post: ${postTitle} image`}
 						className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+						fill
 					/>
 				</div>
 				<div>
@@ -39,10 +41,12 @@ export default function BlogCard<T extends BlogCardProps>({
 					</div>
 					<div className="mt-6 flex border-t border-gray-900/5 pt-6">
 						<div className="relative flex items-center gap-x-4">
-							<img
+							<Image
 								src="cpf_logo.webp"
 								alt=""
 								className="h-10 w-10 rounded-full bg-gray-50"
+								width={40}
+								height={40}
 							/>
 							<div className="text-sm leading-6">
 								<p className="font-semibold text-gray-900">Chef Mark</p>
