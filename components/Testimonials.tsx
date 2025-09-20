@@ -13,7 +13,7 @@ const testimonials = [
 		],
 		[
 			{
-				body: "Chef Mark's charisma and humor are the soul of these cooking classes. His storytelling from years of professional chef experience, paired with expert cooking tips, made the whole experience both educational and fun!",
+				body: "Chef Mark&apos;s charisma and humor are the soul of these cooking classes. His storytelling from years of professional chef experience, paired with expert cooking tips, made the whole experience both educational and fun!",
 				author: {
 					name: "Adi Rudra",
 					handle: "adiexplores",
@@ -25,7 +25,7 @@ const testimonials = [
 	[
 		[
 			{
-				body: "The serene setting of the farm added so much to the cooking class. Cooking in the middle of nature, with the sounds of the farm and the scent of fresh earth made it a truly grounding experience. It's a perfect escape from the city!",
+				body: "The serene setting of the farm added so much to the cooking class. Cooking in the middle of nature, with the sounds of the farm and the scent of fresh earth made it a truly grounding experience. It&apos;s a perfect escape from the city!",
 				author: {
 					name: "Bill Clefford",
 					handle: "billplease61",

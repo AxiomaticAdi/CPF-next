@@ -4,7 +4,7 @@ export async function verifyEventAvailability(
 ): Promise<boolean> {
 	console.log("Verifying event availability...");
 	const response = await fetch(
-		`${import.meta.env.VITE_BACKEND_URL}/verify-event-availability`,
+		`${process.env.NEXT_PUBLIC_BACKEND_URL}/verify-event-availability`,
 		{
 			method: "POST",
 			headers: {
